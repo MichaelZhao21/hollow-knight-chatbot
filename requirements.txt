@@ -1,0 +1,5 @@
+autopep8==2.0.2
+beautifulsoup4==4.12.2
+pycodestyle==2.10.0
+soupsieve==2.4
+tomli==2.0.1
