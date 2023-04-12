@@ -1,0 +1,114 @@
+[
+    {
+        "intent": "greeting",
+        "patterns": [
+            "Hi",
+            "Hello",
+            "Hey",
+            "Hi Robot",
+            "Hi how are you doing?",
+            "Good morning",
+            "Good afternoon",
+            "Good evening"
+        ]
+    },
+    {
+        "intent": "farewell",
+        "patterns": [
+            "Goodbye",
+            "See you later",
+            "Bye",
+            "Take care",
+            "Have a nice day"
+        ]
+    },
+    {
+        "intent": "thank you",
+        "patterns": ["Thank you", "Thanks", "Appreciate it"]
+    },
+    {
+        "intent": "help",
+        "patterns": [
+            "Can you help me?",
+            "I need help",
+            "What can you do?",
+            "What are your capabilities?"
+        ]
+    },
+    {
+        "intent": "info",
+        "patterns": [
+            "Tell me about Abyss Shriek",
+            "Tell me about Focus",
+            "Tell me about Mantis Claw",
+            "How is Howling Wraiths used?",
+            "What does Abyss Shriek do?",
+            "How do I use Abyss Shriek?",
+            "Who is Aspid Mother?",
+            "What is Descending Dark?",
+            "What can you tell me about Death Loodles?",
+            "What are Crawlids like?",
+            "Can you describe Aspids?"
+        ]
+    },
+    {
+        "intent": "weapon_attack_damage",
+        "patterns": [
+            "What is the damage of Abyss Shriek?",
+            "How much damage does Vengeful Spirit do?",
+            "What are the damage values for Desolate Dive?",
+            "How much damage does a pure nail do?"
+        ]
+    },
+    {
+        "intent": "behavior_tactics",
+        "patterns": [
+            "How do Crawlids behave?",
+            "What are the tactics for dealing with Primal Aspids?",
+            "What is the best way to defeat Dung Defender?",
+            "How to kill Great Hopper?",
+            "Can I murder Sheo?",
+            "Tell me how to hit Heavy Fool?"
+        ]
+    },
+    {
+        "intent": "location",
+        "patterns": [
+            "Where can I find Focus?",
+            "What is the location of Abyss Shriek?",
+            "Where is Shade Soul located?",
+            "How do I acquire Mantis Claw?",
+            "Where do I get Vengeful Spirit?",
+            "Where are the Battle Obbles?",
+            "Where can I find Crawlids?",
+            "What areas are Crawlids found in?",
+            "In which locations do Crawlids appear?"
+        ]
+    },
+    {
+        "intent": "journal_entry",
+        "patterns": [
+            "What is the Hunter's Journal entry for Crawlids?",
+            "How is Crawlids' Hunter's Journal entry described?",
+            "What information is provided in Crawlids' Hunter's Journal entry?"
+        ]
+    },
+    {
+        "intent": "spell_upgrade",
+        "patterns": [
+            "What is the upgrade to Howling Wraiths?",
+            "What is the difference between Howling Wraiths and Abyss Shriek?"
+        ]
+    },
+    {
+        "intent": "trivia",
+        "patterns": [
+            "Do you know any trivia about Abyss Shriek?",
+            "What does the Dream Nail reveal about Abyss Shriek?",
+            "Give me some fun facts about Aspid Mother!",
+            "What are some interesting facts about Crawlids?",
+            "Do you know any trivia about Crawlids?",
+            "What was the original design of Crawlids before it was changed?"
+        ]
+    }
+]
