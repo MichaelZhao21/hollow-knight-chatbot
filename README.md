@@ -24,4 +24,5 @@ Forming the knowledge base also takes a hella long time (LIKE ALMOST 11 HOURS). 
 
 ### Model Training
 
-TODO: Not done smh
+We will create our own model to classify the questions into specific intents. To train the model on the intents, run `python train.py`. This is surprisingly fast (which probably means it is bad).
+
