@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 Note that scraping does take a while (600+ pages!). To skip this step, simply run `extract.sh`. This will extract the `output-raw` and `output-data` from the zipped archives to be used in the next step. On the other hand, if you do manually run the scripts, you can zip all the files simply by running `zip-data.sh`.
 
-Forming the knowledge base also takes a hella long time. `extract.sh` will help as the zips will be uploaded to the repo.
+Forming the knowledge base also takes a hella long time (LIKE ALMOST 11 HOURS). `extract.sh` will help as the zips will be uploaded to the repo.
 
 ### Model Training
 

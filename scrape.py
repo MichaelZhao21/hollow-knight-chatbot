@@ -1,5 +1,5 @@
 import urllib
-from bs4 import BeautifulSoup, SoupStrainer
+from bs4 import BeautifulSoup
 import urllib.request
 from pathlib import Path
 

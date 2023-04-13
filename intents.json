@@ -48,27 +48,13 @@
             "What is Descending Dark?",
             "What can you tell me about Death Loodles?",
             "What are Crawlids like?",
-            "Can you describe Aspids?"
-        ]
-    },
-    {
-        "intent": "weapon_attack_damage",
-        "patterns": [
-            "What is the damage of Abyss Shriek?",
-            "How much damage does Vengeful Spirit do?",
-            "What are the damage values for Desolate Dive?",
-            "How much damage does a pure nail do?"
-        ]
-    },
-    {
-        "intent": "behavior_tactics",
-        "patterns": [
-            "How do Crawlids behave?",
-            "What are the tactics for dealing with Primal Aspids?",
-            "What is the best way to defeat Dung Defender?",
-            "How to kill Great Hopper?",
-            "Can I murder Sheo?",
-            "Tell me how to hit Heavy Fool?"
+            "Can you describe Aspids?",
+            "What does Deepnest look like?",
+            "What does Baldur Shell do?",
+            "How much does it cost to buy a Quill?",
+            "How much geo for the Wayward Compass?",
+            "What would I have to pay to sit on the bench?",
+            "What is the price for the Ancient Basin map?"
         ]
     },
     {
@@ -86,6 +72,39 @@
         ]
     },
     {
+        "intent": "trivia",
+        "patterns": [
+            "Do you know any trivia about Abyss Shriek?",
+            "What does the Dream Nail reveal about Abyss Shriek?",
+            "Give me some fun facts about Aspid Mother!",
+            "What are some interesting facts about Crawlids?",
+            "Do you know any trivia about Crawlids?",
+            "What was the original design of Crawlids before it was changed?",
+            "What is the lore behind Baldur?"
+        ]
+    },
+    {
+        "intent": "weapon_damage",
+        "patterns": [
+            "What is the damage of Abyss Shriek?",
+            "How much damage does Vengeful Spirit do?",
+            "What are the damage values for Desolate Dive?",
+            "How much damage does a pure nail do?"
+        ]
+    },
+    {
+        "intent": "behavior_tactics",
+        "patterns": [
+            "How do Crawlids behave?",
+            "What are the tactics for dealing with Primal Aspids?",
+            "What is the best way to defeat Dung Defender?",
+            "How to kill Great Hopper?",
+            "Can I murder Sheo?",
+            "Tell me how to hit Heavy Fool?",
+            "What is a one day to deal with Obbles?"
+        ]
+    },
+    {
         "intent": "journal_entry",
         "patterns": [
             "What is the Hunter's Journal entry for Crawlids?",
@@ -98,17 +117,6 @@
         "patterns": [
             "What is the upgrade to Howling Wraiths?",
             "What is the difference between Howling Wraiths and Abyss Shriek?"
-        ]
-    },
-    {
-        "intent": "trivia",
-        "patterns": [
-            "Do you know any trivia about Abyss Shriek?",
-            "What does the Dream Nail reveal about Abyss Shriek?",
-            "Give me some fun facts about Aspid Mother!",
-            "What are some interesting facts about Crawlids?",
-            "Do you know any trivia about Crawlids?",
-            "What was the original design of Crawlids before it was changed?"
         ]
     }
 ]
