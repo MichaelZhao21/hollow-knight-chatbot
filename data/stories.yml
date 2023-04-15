@@ -1,0 +1,312 @@
+version: "3.1"
+
+stories:
+- story: basic hello goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: goodbye
+  - action: utter_goodbye
+- story: information
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: info
+  - action: utter_general_info
+  - action: utter_help
+
+- story: behvaior
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: behavior_tactics
+    entities:
+    - topic: Hollow Knight
+  - action: action_get_behavior
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: affirm
+
+- story: spells list
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: spells_general
+  - action: utter_spell_list
+  - intent: info
+    entities:
+    - topic: Desolate Dive
+  - action: action_get_info
+  - action: utter_help
+  - intent: info
+    entities:
+    - topic: Abyss Shriek
+  - action: action_get_info
+  - action: utter_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: general info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: info
+  - action: utter_general_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: spell list then info
+  steps:
+  - intent: spells_general
+  - action: utter_spell_list
+  - intent: info
+    entities:
+    - topic: Descending Dark
+  - action: action_get_info
+  - action: utter_help
+
+- story: get_info
+  steps:
+  - intent: spells_general
+  - action: utter_spell_list
+  - intent: info
+    entities:
+    - topic: Abyss Shriek
+  - action: action_get_info
+  - action: utter_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: action info
+  steps:
+  - intent: location
+    entities:
+    - topic: grubs
+  - action: action_get_location
+  - intent: behavior_tactics
+    entities:
+    - topic: Hollow Knight
+  - intent: info
+    entities:
+    - topic: Hollow Knight
+  - action: action_get_info
+  - action: utter_help
+
+- story: get all actions
+  steps:
+  - intent: info
+    entities:
+    - topic: Hollow Knight
+  - action: action_get_info
+  - action: utter_help
+  - intent: location
+    entities:
+    - topic: Cornifer
+  - action: action_get_location
+  - intent: behavior_tactics
+    entities:
+    - topic: False Knight
+  - intent: behavior_tactics
+    entities:
+    - topic: False Knight
+  - action: action_get_behavior
+  - intent: spell_upgrade
+    entities:
+    - topic: Desolate Dive
+  - action: action_get_spell
+  - intent: weapon_damage
+    entities:
+    - topic: Pure Nail
+  - action: action_get_weapon
+  - intent: journal_entry
+    entities:
+    - topic: Lost Kin
+  - action: action_get_journal
+  - intent: trivia
+    entities:
+    - topic: Hollow Knight
+  - action: action_get_trivia
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: info
+    entities:
+    - topic: Cornifer
+  - action: action_get_info
+  - action: utter_help
+  - intent: spells_general
+  - action: utter_spell_list
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: get name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+  - action: utter_name
+  - action: utter_help
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+    entities:
+    - name: Michael
+  - action: utter_name
+  - action: utter_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: more actions
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+    entities:
+    - name: Michael
+  - action: utter_name
+  - action: utter_help
+  - intent: info
+    entities:
+    - topic: Hollow Knight
+  - action: action_get_info
+  - action: utter_help
+  - intent: spells_general
+  - action: utter_spell_list
+  - intent: info
+  - action: utter_general_info
+  - action: utter_help
+  - intent: info
+  - intent: behavior_tactics
+    entities:
+    - topic: Hornet
+  - action: action_get_behavior
+  - intent: spells_general
+  - action: utter_spell_list
+
+- story: greenpath
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+    entities:
+    - name: Michael
+  - slot_was_set:
+    - name: Michael
+  - action: utter_name
+  - action: utter_help
+  - intent: info
+    entities:
+    - topic: Greenpath
+  - action: action_get_info
+  - action: utter_help
+  - intent: behavior_tactics
+    entities:
+    - topic: Moss Knight
+  - action: action_get_behavior
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: name test
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+    entities:
+    - name: Michael
+  - slot_was_set:
+    - name: Michael
+  - action: utter_name
+  - action: utter_help
+  - intent: info
+  - intent: info
+    entities:
+    - topic: Iselda
+  - action: action_get_info
+  - action: utter_help
+  - intent: behavior_tactics
+    entities:
+    - topic: Soul Tyrant
+  - action: action_get_behavior
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: many actions
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+    entities:
+    - name: Michael
+  - slot_was_set:
+    - name: Michael
+  - action: utter_name
+  - action: utter_help
+  - intent: location
+    entities:
+    - topic: Abyss
+  - action: action_get_location
+  - intent: behavior_tactics
+    entities:
+    - topic: Sly
+  - action: action_get_behavior
+  - intent: info
+    entities:
+    - topic: Mantis Lords
+  - action: action_get_info
+  - action: utter_help
+  - intent: behavior_tactics
+    entities:
+    - topic: Mantis Lords
+  - action: action_get_behavior
+
+- story: no name
+  steps:
+  - intent: behavior_tactics
+    entities:
+    - topic: Radiance
+  - action: action_get_behavior
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+    entities:
+    - name: Michael
+  - slot_was_set:
+    - name: Michael
+  - action: utter_name
+  - action: utter_help
+  - intent: location
+    entities:
+    - topic: Primal Aspid
+  - action: action_get_location
+  - intent: info
+    entities:
+    - topic: Primal Aspids
+  - action: action_get_info
+  - action: utter_help
+  - intent: behavior_tactics
+    entities:
+    - topic: Primal Aspid
+  - action: action_get_behavior
+  - intent: goodbye
+  - action: utter_goodbye

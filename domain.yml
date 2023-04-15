@@ -1,0 +1,58 @@
+version: '3.1'
+intents:
+- affirm
+- behavior_tactics
+- bot_challenge
+- deny
+- goodbye
+- greet
+- info
+- journal_entry
+- location
+- say_name
+- spell_upgrade
+- spells_general
+- trivia
+- weapon_damage
+responses:
+  utter_spell_list:
+  - text: There are many spells that you can use to attack in Hollow Knight! Some spells include Vengeful Spirit, Desolate Dive, and Howling Wraiths. Do you have a question about a specific spell?
+  utter_greet:
+  - text: Hello! I am a chatbot, designed to help you with anything related to Hollow Knight! What is your name?
+  utter_name:
+  - text: Nice to meet you {name}!
+  utter_help:
+  - text: How can I help you today?
+  utter_goodbye:
+  - text: Goodbye {name}! Hope I could help you with your questions.
+  utter_iamabot:
+  - text: I am a chatbot, designed to help you with anything related to Hollow Knight!
+  utter_general_info:
+  - text: I can tell you about the different charms, spells, and skills in Hollow Knight. What do you need info on specifically?
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_goodbye
+- utter_greet
+- action_get_info
+- utter_name
+- action_get_behavior
+- utter_help
+- action_get_location
+- utter_spell_list
+- utter_general_info
+- utter_iamabot
+- action_get_journal
+- action_get_spell
+- action_get_weapon
+- action_get_trivia
+entities:
+- topic
+- name
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name

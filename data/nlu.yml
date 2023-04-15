@@ -1,0 +1,183 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hello bot
+    - hello!
+    - Hello!
+    - Hi
+    - Good morning!
+    - Hello
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - good bye
+    - Goodnight
+    - Goodbye
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: say_name
+  examples: |
+    - my name is [Max](name)
+    - call me [John](name)
+    - I'm [Michael](name)
+    - [Smith](name)
+    - My name is [Michael](name)
+    - My name is [michael]{"entity": "name", "value": "Michael"}
+    - My name is [Michael](name)
+- intent: info
+  examples: |
+    - tell me about [Abyss Shriek](topic)
+    - tell me about [Focus](topic)
+    - tell me about [Mantis Claw](topic)
+    - how is [howling Wraiths](topic) used?
+    - what does [Abyss Shriek](topic) do?
+    - how do I use [Abyss Shriek](topic)?
+    - Who is [Aspid Mother](topic)?
+    - what is [Descending Dark](topic)?
+    - what can you tell me about [Death Loodles](topic)?
+    - what are [Crawlids](topic) like?
+    - can you describe [Aspids](topic)?
+    - what does [Deepnest](topic) look like?
+    - what does [Baldur Shell](topic) do?
+    - how much does it cost to buy a [Quill](topic)?
+    - how much geo for the [Wayward Compass](topic)?
+    - what would I have to pay to enter [Crystal Peaks](topic)?
+    - what is the price for the [Ancient Basin](topic) map?
+    - Do you know how to obtain [Desolate Dive](topic)?
+    - How can I get [Abyss Shriek](topic)?
+    - How do I use [descending dark]{"entity": "topic", "value": "Descending Dark"}?
+    - What can I do with [Abyss Shriek](topic)?
+    - Tell me about [Hollow Knight](topic)
+    - Who is the [Hollow Knight](topic)?
+    - Who is [cornifer]{"entity": "topic", "value": "Cornifer"}?
+    - What is the [hollow knight]{"entity": "topic", "value": "Hollow Knight"}?
+    - What is happening?
+    - I am stuck on [Greenpath](topic)
+    - Who is [Iselda](topic)?
+    - Who are the [Mantis Lords](topic)?
+    - What are [Primal Aspids](topic)?
+- intent: location
+  examples: |
+    - Where can I find [Focus](topic)?
+    - what is the location of [Abyss Shriek](topic)?
+    - Where is [Shade Soul](topic) located?
+    - how do I acquire [Mantis Claw](topic)?
+    - Where do I get [Veneful Spirit](topic)?
+    - Where are the [Battle Obbles](topic)?
+    - Where can I find [Crawlids](topic)?
+    - what areas are [Crawlids](topic) found in?
+    - In which locations do [Crawlids](topic) appear?
+    - How do I find [grubs](topic)?
+    - Where can I find [Cornifer](topic)?
+    - I am lost in the [Abyss](topic)
+    - Where can I find a [Primal Aspid](topic)?
+- intent: trivia
+  examples: |
+    - do you know any trivia about [Abyss Shriek](topic)?
+    - what does the Dream Nail reveal about [Abyss Shriek](topic)?
+    - Give me some fun facts about [Aspid Mother](topic)!
+    - what are some interesting facts about [Crawlids](topic)?
+    - do you know any trivia about [Crawlids](topic)?
+    - what was the original design of [Crawlids](topic) before it was changed?
+    - what is the lore behind [Baldur](topic)?
+- intent: weapon_damage
+  examples: |
+    - what is the damage of [Abyss Shriek](topic)?
+    - how much damage does [Veneful Spirit](topic) do?
+    - what are the damage values for [Desolate Dive](topic)?
+    - how much damage does a [Pure Nail](topic) do?
+- intent: behavior_tactics
+  examples: |
+    - how do [Crawlids](topic) behave?,
+    - what are the tactics for dealing with [Primal Aspids](topic)?,
+    - what is the best way to defeat [Dung Defender](topic)?,
+    - how to kill [Great Hopper](topic)?,
+    - how can I murder [Sheo](topic)?,
+    - tell me how to hit [Heavy Fool](topic)?,
+    - what is a one day to deal with [Obbles](topic)?,
+    - how do I kill the [Hollow Knight](topic)?
+    - How do I defeat [False Knight](topic)?
+    - Can I get help with fighting [Hornet](topic)?
+    - How do I beat [Moss Knight](topic)?
+    - How do I defeat [Soul Tyrant](topic)?
+    - How do I defeat [Sly](topic)?
+    - How do I kill the [Mantis Lords](topic)?
+    - How do I kill the [Radiance](topic)?
+    - How can I kill a [Primal Aspid](topic)?
+- intent: journal_entry
+  examples: |
+    - what is the Hunter's Journal entry for [Crawlids](topic)?,
+    - how is [Crawlids](topic) Hunter's Journal entry described?,
+    - what information is provided in [Crawlids](topic) Hunter's Journal entry?
+- intent: spell_upgrade
+  examples: |
+    - what is the upgrade to [Howling Wraiths](topic)?,
+    - what is the difference between [Howling Wraiths](topic) and [Abyss Shriek](topic)?
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - Am I dumb?
+- intent: spells_general
+  examples: |
+    - Can you help me with spells?
+    - What are the spells used in this game?
+    - How do I use spells?
+    - What are spells?
+    - Which spells are avaliable?
+    - Which spells can I use?
+    - What can I do with spells?
+    - How can I help you?
+    - Help with spells
+- synonym: Michael
+  examples: |
+    - michael
+- synonym: Descending Dark
+  examples: |
+    - descending dark
+- synonym: Cornifer
+  examples: |
+    - cornifer
+- synonym: Hollow Knight
+  examples: |
+    - hollow knight
