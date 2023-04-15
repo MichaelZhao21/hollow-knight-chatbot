@@ -12,6 +12,7 @@ intents:
 - say_name
 - spell_upgrade
 - spells_general
+- thank
 - trivia
 - weapon_damage
 responses:
@@ -29,22 +30,28 @@ responses:
   - text: I am a chatbot, designed to help you with anything related to Hollow Knight!
   utter_general_info:
   - text: I can tell you about the different charms, spells, and skills in Hollow Knight. What do you need info on specifically?
+  utter_more_on_topic:
+  - text: Do you have any more questions about {topic}? I can tell you about general info, location, behavior, tactics, journal entries, or trivia.
+  utter_welcome:
+  - text: You are welcome {name}! I'm glad I could be of assistance.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
-- utter_goodbye
 - utter_greet
-- action_get_info
 - utter_name
-- action_get_behavior
-- utter_help
+- utter_goodbye
+- action_get_info
+- utter_welcome
 - action_get_location
+- utter_more_on_topic
+- utter_help
+- action_get_spell
+- action_get_behavior
 - utter_spell_list
 - utter_general_info
 - utter_iamabot
 - action_get_journal
-- action_get_spell
 - action_get_weapon
 - action_get_trivia
 entities:
@@ -56,3 +63,8 @@ slots:
     mappings:
     - type: from_entity
       entity: name
+  topic:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: topic

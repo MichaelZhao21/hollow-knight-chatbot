@@ -36,32 +36,31 @@ nlu:
     - good bye
     - Goodnight
     - Goodbye
-- intent: affirm
+- intent: thank
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - thanks
+    - thank you
+    - thank you very much
+    - thanks a lot
+    - thanks a bunch
+    - thanks a ton
+    - thanks a million
+    - thank you for answering my question
+    - thank you for your help
+    - thank you!
+    - thank you so much
 - intent: say_name
   examples: |
     - my name is [Max](name)
     - call me [John](name)
     - I'm [Michael](name)
     - [Smith](name)
-    - My name is [Michael](name)
+    - My name is [Sam](name)
     - My name is [michael]{"entity": "name", "value": "Michael"}
-    - My name is [Michael](name)
+    - [Michael](name)
+    - My name is [Mikey](name)
+    - my name is [Sam Smith](name)
+    - My name is [John](name)
 - intent: info
   examples: |
     - tell me about [Abyss Shriek](topic)
@@ -94,6 +93,9 @@ nlu:
     - Who is [Iselda](topic)?
     - Who are the [Mantis Lords](topic)?
     - What are [Primal Aspids](topic)?
+    - Can you tell me how to get [Abyss Shriek](topic)
+    - How do I get to [White Palace](topic)?
+    - What is a [Crawlid](topic)
 - intent: location
   examples: |
     - Where can I find [Focus](topic)?
@@ -109,6 +111,10 @@ nlu:
     - Where can I find [Cornifer](topic)?
     - I am lost in the [Abyss](topic)
     - Where can I find a [Primal Aspid](topic)?
+    - Where can I find [Oro and Mato](topic)?
+    - Can you tell me where [Fog Canyon](topic) is?
+    - Where is [Abyss Shriek](topic)?
+    - Tell me about where I can find [Crawlids](topic)
 - intent: trivia
   examples: |
     - do you know any trivia about [Abyss Shriek](topic)?
@@ -151,6 +157,7 @@ nlu:
   examples: |
     - what is the upgrade to [Howling Wraiths](topic)?,
     - what is the difference between [Howling Wraiths](topic) and [Abyss Shriek](topic)?
+    - Is [Abyss Shriek](topic) an upgrade?
 - intent: bot_challenge
   examples: |
     - are you a bot?

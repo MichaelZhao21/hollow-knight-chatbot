@@ -26,6 +26,7 @@ stories:
     entities:
     - topic: Hollow Knight
   - action: action_get_behavior
+  - action: utter_more_on_topic
   - intent: goodbye
   - action: utter_goodbye
   - intent: affirm
@@ -41,12 +42,12 @@ stories:
     entities:
     - topic: Desolate Dive
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: info
     entities:
     - topic: Abyss Shriek
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: goodbye
   - action: utter_goodbye
 
@@ -68,7 +69,9 @@ stories:
     entities:
     - topic: Descending Dark
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: get_info
   steps:
@@ -78,7 +81,7 @@ stories:
     entities:
     - topic: Abyss Shriek
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: goodbye
   - action: utter_goodbye
 
@@ -88,6 +91,7 @@ stories:
     entities:
     - topic: grubs
   - action: action_get_location
+  - action: utter_more_on_topic
   - intent: behavior_tactics
     entities:
     - topic: Hollow Knight
@@ -95,7 +99,7 @@ stories:
     entities:
     - topic: Hollow Knight
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
 
 - story: get all actions
   steps:
@@ -103,11 +107,12 @@ stories:
     entities:
     - topic: Hollow Knight
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: location
     entities:
     - topic: Cornifer
   - action: action_get_location
+  - action: utter_more_on_topic
   - intent: behavior_tactics
     entities:
     - topic: False Knight
@@ -115,22 +120,27 @@ stories:
     entities:
     - topic: False Knight
   - action: action_get_behavior
+  - action: utter_more_on_topic
   - intent: spell_upgrade
     entities:
     - topic: Desolate Dive
   - action: action_get_spell
+  - action: utter_more_on_topic
   - intent: weapon_damage
     entities:
     - topic: Pure Nail
   - action: action_get_weapon
+  - action: utter_more_on_topic
   - intent: journal_entry
     entities:
     - topic: Lost Kin
   - action: action_get_journal
+  - action: utter_more_on_topic
   - intent: trivia
     entities:
     - topic: Hollow Knight
   - action: action_get_trivia
+  - action: utter_more_on_topic
   - intent: goodbye
   - action: utter_goodbye
 
@@ -143,7 +153,7 @@ stories:
     entities:
     - topic: Cornifer
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: spells_general
   - action: utter_spell_list
   - intent: bot_challenge
@@ -185,7 +195,7 @@ stories:
     entities:
     - topic: Hollow Knight
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: spells_general
   - action: utter_spell_list
   - intent: info
@@ -196,6 +206,7 @@ stories:
     entities:
     - topic: Hornet
   - action: action_get_behavior
+  - action: utter_more_on_topic
   - intent: spells_general
   - action: utter_spell_list
 
@@ -214,11 +225,12 @@ stories:
     entities:
     - topic: Greenpath
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: behavior_tactics
     entities:
     - topic: Moss Knight
   - action: action_get_behavior
+  - action: utter_more_on_topic
   - intent: goodbye
   - action: utter_goodbye
 
@@ -238,11 +250,12 @@ stories:
     entities:
     - topic: Iselda
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: behavior_tactics
     entities:
     - topic: Soul Tyrant
   - action: action_get_behavior
+  - action: utter_more_on_topic
   - intent: goodbye
   - action: utter_goodbye
 
@@ -261,19 +274,22 @@ stories:
     entities:
     - topic: Abyss
   - action: action_get_location
+  - action: utter_more_on_topic
   - intent: behavior_tactics
     entities:
     - topic: Sly
   - action: action_get_behavior
+  - action: utter_more_on_topic
   - intent: info
     entities:
     - topic: Mantis Lords
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: behavior_tactics
     entities:
     - topic: Mantis Lords
   - action: action_get_behavior
+  - action: utter_more_on_topic
 
 - story: no name
   steps:
@@ -281,10 +297,11 @@ stories:
     entities:
     - topic: Radiance
   - action: action_get_behavior
+  - action: utter_more_on_topic
   - intent: goodbye
   - action: utter_goodbye
 
-- story: interactive_story_1
+- story: Primal Aspids are great
   steps:
   - intent: greet
   - action: utter_greet
@@ -299,14 +316,159 @@ stories:
     entities:
     - topic: Primal Aspid
   - action: action_get_location
+  - action: utter_more_on_topic
   - intent: info
     entities:
     - topic: Primal Aspids
   - action: action_get_info
-  - action: utter_help
+  - action: utter_more_on_topic
   - intent: behavior_tactics
     entities:
     - topic: Primal Aspid
   - action: action_get_behavior
+  - action: utter_more_on_topic
   - intent: goodbye
   - action: utter_goodbye
+
+- story: more asking stuff
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+    entities:
+    - name: Michael
+  - slot_was_set:
+    - name: Michael
+  - action: utter_name
+  - action: utter_help
+  - intent: location
+  - intent: location
+    entities:
+    - topic: Oro and Mato
+  - action: action_get_location
+  - action: utter_more_on_topic
+  - intent: info
+    entities:
+    - topic: Fog
+  - slot_was_set:
+    - topic: Fog
+  - intent: location
+    entities:
+    - topic: Fog Canyon
+  - action: action_get_location
+  - action: utter_more_on_topic
+
+- story: thanking the bot
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+    entities:
+    - name: Michael
+  - slot_was_set:
+    - name: Michael
+  - action: utter_name
+  - action: utter_help
+  - intent: info
+    entities:
+    - topic: Cornifer
+  - action: action_get_info
+  - action: utter_more_on_topic
+  - intent: behavior_tactics
+    entities:
+    - topic: Cornifer
+  - action: action_get_behavior
+  - action: utter_more_on_topic
+  - intent: thank
+  - action: utter_welcome
+  - action: utter_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: abyss shriek
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+  - intent: say_name
+    entities:
+    - name: Mikey
+  - action: utter_name
+  - action: utter_help
+  - intent: info
+    entities:
+    - topic: Abyss Shriek
+  - slot_was_set:
+    - topic: Abyss Shriek
+  - action: action_get_info
+  - action: utter_more_on_topic
+  - intent: say_name
+    entities:
+    - name: Michael
+  - slot_was_set:
+    - name: Michael
+  - action: utter_name
+  - action: utter_help
+  - intent: info
+    entities:
+    - topic: Abyss Shriek
+  - slot_was_set:
+    - topic: Abyss Shriek
+  - intent: location
+    entities:
+    - topic: Abyss Shriek
+  - action: action_get_location
+  - action: utter_more_on_topic
+  - intent: spell_upgrade
+    entities:
+    - topic: Abyss Shriek
+  - slot_was_set:
+    - topic: Abyss Shriek
+  - action: action_get_spell
+  - action: utter_more_on_topic
+  - intent: thank
+  - action: utter_welcome
+  - action: utter_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: full example with thanks
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_name
+    entities:
+    - name: John
+  - slot_was_set:
+    - name: John
+  - action: utter_name
+  - action: utter_help
+  - intent: info
+    entities:
+    - topic: Palace
+  - slot_was_set:
+    - topic: Palace
+  - intent: info
+    entities:
+    - topic: White Palace
+  - action: action_get_info
+  - action: utter_more_on_topic
+  - intent: info
+    entities:
+    - topic: Crawlid
+  - slot_was_set:
+    - topic: Crawlid
+  - action: action_get_info
+  - action: utter_more_on_topic
+  - intent: location
+    entities:
+    - topic: Crawlids
+  - slot_was_set:
+    - topic: Crawlids
+  - action: action_get_location
+  - action: utter_more_on_topic
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: thank
+  - action: utter_welcome
+  - action: utter_help
