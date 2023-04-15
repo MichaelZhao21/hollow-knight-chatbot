@@ -62,5 +62,5 @@ rasa run actions
 Once that is running, open a new terminal and run the bot
 
 ```bash
-rasa shell --environments environments.yml
+rasa shell --endpoints endpoints.yml
 ```
