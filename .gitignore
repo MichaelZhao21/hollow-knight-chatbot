@@ -7,3 +7,5 @@ story_graph.dot
 graph.html
 **/*/__pycache__
 models
+.keras
+.config

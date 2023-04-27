@@ -1,7 +1,10 @@
 version: '3.0'
 services:
   rasa:
-    image: rasa/rasa:3.5.5-full
+    image: michaelzhao21/hollow-knight-chatbot
+    build:
+      context: .
+      dockerfile: Dockerfile.rasa
     ports:
       - 5005:5005
     volumes:
@@ -9,6 +12,7 @@ services:
     command:
       - run
   app:
+    image: michaelzhao21/hollow-knight-chatbot-actions
     container_name: action_server
     build: .
     volumes:
