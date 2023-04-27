@@ -36,6 +36,10 @@ We will create our own model to classify the questions into specific intents. To
 
 ## Running the Bot
 
+### DOCKER
+
+The app has been dockerized!!! Once you have the `output-kb` folder and everything installed, you can simply run `docker compose up` and the app should run.
+
 ### Setup
 
 The bot is a combination of Rasa and custom actions that connect with my underlying knowledge base.
@@ -62,5 +66,5 @@ rasa run actions
 Once that is running, open a new terminal and run the bot
 
 ```bash
-rasa shell --endpoints endpoints.yml
+rasa shell --endpoints endpoints-local.yml
 ```
